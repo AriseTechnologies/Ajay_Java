@@ -1,0 +1,14 @@
+package a;
+
+public class Test4 {
+ static int x=10;
+public static void main(String[] args) {
+	Test4 t=new Test4();
+	
+
+	System.out.println(x);
+}
+static {
+	System.out.println(x+"");
+}
+}

@@ -1,0 +1,17 @@
+package a;
+
+public class Student {
+private int age;
+public void setage(int ageStu) {
+	if(ageStu>0) {
+		age=ageStu;
+	}else {
+		age=0;
+	}
+}
+public static void main(String[] args) {
+	Student s=new Student();
+	s.setage(10);
+}
+
+}

@@ -1,0 +1,10 @@
+package firstProject;
+
+public class Simpleinterest {
+	void interest(int p, int n) {
+		float r = 4.5f;
+		float interest = p * n * r;
+		System.out.println("simple interest=" + interest);
+
+	}
+}

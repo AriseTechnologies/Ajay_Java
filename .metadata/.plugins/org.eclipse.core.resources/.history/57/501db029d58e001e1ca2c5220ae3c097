@@ -1,0 +1,40 @@
+package com.tka.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class BookProcess {
+static Connection con=null;
+public static Connection connect() {
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "root");
+	}
+	catch(ClassNotFoundException c) {
+		c.printStackTrace();
+	}
+	catch(SQLException c) {
+		c.printStackTrace();
+	}
+	return con;
+}
+public static void addBook() throws SQLException{
+	PreparedStatement ptmt=con.prepareStatement("insert into book values(?,?,?)");
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter book id");
+	int bid=sc.nextInt();
+	ptmt.setInt(1, bid); // 1 specify the first parameter in query
+	System.out.println("Enter the book cost");
+	int bcost=sc.nextInt();
+	ptmt.setInt(2, bcost);
+	System.out.println("Enter the book name");
+	String bnm=sc.next();
+	ptmt.setString(3, bnm);
+	ptmt.executeUpdate();
+	System.out.println("Book added");
+}
+public static void 
+}

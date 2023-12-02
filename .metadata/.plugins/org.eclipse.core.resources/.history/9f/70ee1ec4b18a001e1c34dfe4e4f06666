@@ -1,0 +1,49 @@
+package a;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
+
+public class Y {
+	public static void main(String[] args) {
+//		ArrayList<Payment> list = new ArrayList<>();
+		Payment p1 = new Payment(1, 100d, "PhonePay");
+		Payment p2 = new Payment(2, 150d, "GPay");
+		Payment p3 = new Payment(3, 200d, "NetBank");
+		Payment p4 = new Payment(4, 240d, "PhonePay");
+		Payment p5 = new Payment(5, 400d, "GPay");
+		
+		ArrayList<Payment> list = new ArrayList<>( Arrays.asList(p1,p2,p3,p4,p5));
+		
+//		System.out.println(list);
+		
+		Y y = new Y();
+		y.getType(list);
+	}
+	
+	public Set<String> getType(ArrayList<Payment> list){
+//		Set<String> types = new HashSet<String>();
+		return list.stream().map(p -> p.getType()).collect(Collectors.toSet());
+	}
+	
+//	public Map<String,Double> getPays (ArrayList<Payment> list){
+//		list.stream().map(p -> p.getType()).collect(Collectors.groupingBy(s -> s,new HashMap(),))
+//	}
+	
+	Comparator<Payment> comp = (p1, p2) -> {
+		return p2.getAmount().compareTo(p1.getAmount());
+	};
+	
+//	public String getRankValue(ArrayList<Payment> list,int rank) {
+//		TreeSet<Payment> set = new TreeSet<Payment>(comp);
+//		
+//		return set.;
+//	}
+	
+}

@@ -1,0 +1,42 @@
+package first;
+
+public class Operation {
+	
+	 int a=20;	// non-static variable
+	 int b=10;
+	
+	void add(int a,int b) {
+		int add=a+b;
+		System.out.println("add="+add);
+	}
+	void sub(int a,int b) {
+		int sub=a-b;
+		System.out.println("sub="+sub);
+		
+	}
+	
+	void mult(int a,int b) {
+		int mult=a*b;
+		System.out.println("mult="+mult);
+		}
+
+	void div(int a,int b) {
+		int div=a/b;
+		System.out.println("div="+div);
+	}
+	
+	void calculator () {	// non static method
+		add(a, b);
+		sub(a, b);
+		mult(a, b);
+		div(a, b);
+	}
+	public static void main(String[] args) {	// static method
+		Operation o=new Operation();
+		o.calculator();
+//		o.add(a,b);
+//		o.sub(a,b);
+//		o.mult(a, b);
+//		o.div(a, b);
+	}
+}

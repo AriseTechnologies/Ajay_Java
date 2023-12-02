@@ -1,0 +1,16 @@
+package practice;
+
+// sum of individual digits of the given no.
+
+public class Lab {
+public static void main(String[] args) {
+	int n=123;
+	int sum=0;
+	while(n!=0) {
+		int r=n%10;
+		sum+=r;
+		n=n/10;
+	}
+	System.out.println("sum ="+ sum);
+}
+}

@@ -1,0 +1,77 @@
+package com.tka.threadprg;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.*;
+
+public class Wait_SynEg {
+List lt;
+Wait_SynEg(){
+	// Creating a synchronized list
+	lt=Collections.synchronizedList(new LinkedList());
+	
+}
+public String removeElement() throws InterruptedException{
+	//synchornized block
+	
+	synchronized (lt) {
+		// if the list is empty then wait
+		while(lt.isEmpty()) {
+			System.out.println("List is Empty ");
+			lt.wait();
+			System.out.println("Waiting");
+		}
+		String e=(String) lt.remove(0);
+		return e;
+		// returning the element is removed
+	}
+}
+public void addElement(String s) {
+	System.out.println("adding");
+	synchronized (lt) {
+		System.out.println(s);
+		// after adding element into the list we notify the waiting thread
+		lt.notifyAll();
+		System.out.println("Notify called");
+	}
+	System.out.println("complete");
+}
+public static void main(String[] args) throws InterruptedException {
+	Wait_SynEg w=new Wait_SynEg();
+	
+	// for removing an element
+	Runnable r=new Runnable() {
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			String s1;
+			try {
+				s1=w.removeElement();
+				System.out.println("Remove element is-"+s1);
+			}
+			catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	};
+	// for adding an element
+	Runnable r1=new Runnable() {
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			w.addElement("Java");
+		}
+		
+	};
+	Thread t1=new Thread(r);
+	t1.start();
+	Thread.sleep(500);
+	
+	Thread t2=new Thread(r1);
+	t2.start();
+	Thread.sleep(500);
+}
+}

@@ -1,0 +1,8 @@
+package a;
+
+public class Result1 {
+public static void main(String[] args) {
+	X x=new X();
+	x.avg(12, 12);
+}
+}

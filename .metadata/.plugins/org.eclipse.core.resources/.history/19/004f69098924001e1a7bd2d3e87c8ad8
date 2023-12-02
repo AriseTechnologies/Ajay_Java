@@ -1,0 +1,34 @@
+package first;
+
+public class Operation {
+	Operation o=new Operation();
+	int	a=20;
+	int b=10;
+	
+	void add(int a,int b) {
+		int add=a+b;
+		System.out.println("add="+add);
+	}
+	void sub(int a,int b) {
+		int sub=a-b;
+		System.out.println("sub="+sub);
+		
+	}
+	
+	void mult(int a,int b) {
+		int mult=a*b;
+		System.out.println("mult="+mult);
+		}
+
+	void div(int a,int b) {
+		int div=a/b;
+		System.out.println("div="+div);
+	}
+	public static void main(String[] args) {
+		Operation o=new Operation();
+		o.add(0, 0);
+		o.sub(0, 0);
+		o.mult(0, 0);
+		o.div(0, 0);
+	}
+}

@@ -1,0 +1,12 @@
+package a;
+
+public class Bank {
+private static int balance=1000;
+void saving(int amt) {
+	if (amt>500) {
+		System.out.println("balance show="+amt);		
+	}else {
+		System.out.println("zero");
+	}
+}
+}

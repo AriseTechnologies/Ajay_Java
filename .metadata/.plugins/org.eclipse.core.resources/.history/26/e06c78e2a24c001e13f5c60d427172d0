@@ -1,0 +1,19 @@
+package practice;
+
+public class Year {
+	void main(int year) {
+		int leep=0;
+		int notleep=0;
+		if (year%4==0 || year %400==0 ) {
+			System.out.println("yaer="+leep);
+		}else {
+			System.out.println("year="+notleep);
+		}
+	}
+	public static void main(String[] args) {
+		Year y=new Year();
+		y.main(2000);
+
+	}
+}
+

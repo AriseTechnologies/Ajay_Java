@@ -1,0 +1,17 @@
+package com.tka.service;
+import java.util.ArrayList;
+
+
+import com.tka.entity.Tour;
+import com.tka.entity.*;
+
+public class TourDiscount {
+public static void discount(ArrayList<? extends Tour>) {
+	for(Tour e: t) {
+		if(e instanceof DomasticTour) {
+			DomasticTour t1=(DomasticTour)e;
+			t1.
+		}
+	}
+}
+}

@@ -1,0 +1,21 @@
+package array;
+
+//  Program to find max no.
+
+public class Lab1 {
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+		int c = 80;
+
+		if ((a > b) && (a > c)) {
+			System.out.println("max" + a);
+		} else if (b > c) {
+			System.out.println("max" + b);
+
+		} else {
+			System.out.println("max" + c);
+		}
+
+	}
+}

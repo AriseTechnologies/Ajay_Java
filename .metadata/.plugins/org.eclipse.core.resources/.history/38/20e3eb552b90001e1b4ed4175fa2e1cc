@@ -1,0 +1,47 @@
+package com.tka.controller;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import com.tka.exception.PasswordLengthException;
+import com.tka.service.LoginService;
+
+public class LoginMain {
+public static void main(String[] argsc)throws SQLException,PasswordLengthException {
+	Scanner sc=new Scanner(System.in);
+	int choice=0,ch;
+	do {
+		System.out.println("1.Register for new user");
+		System.out.println("2.Login");
+		System.out.println("3.Update pasword");
+		System.out.println("4.Delete Account");
+		System.out.println("5.Fetch data");
+		
+		ch=sc.nextInt();
+		switch(ch) {
+		case 1:{
+			LoginService.newRegister();
+			break;
+		}
+		case 2:{
+			LoginService.validatelogin();
+			break;
+		}
+		case 3:{
+			LoginService.upDatePassword();
+			break;
+		}
+		case 4:{
+			LoginService.deleteAccount();
+			break;
+		}
+		case 5:{
+			LoginService.fetchData();
+			break;
+		}
+		}
+		System.out.println("ENter 1 to continue else enter 0");	
+		choice=sc.nextInt();
+	}while(choice==1);
+}
+}

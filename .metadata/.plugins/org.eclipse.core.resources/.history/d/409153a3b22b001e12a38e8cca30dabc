@@ -1,0 +1,9 @@
+package a;
+
+public class Addition {
+	Variable v=new Variable();
+void add(int a,int b) {
+	
+	System.out.println(a+b);
+}
+}

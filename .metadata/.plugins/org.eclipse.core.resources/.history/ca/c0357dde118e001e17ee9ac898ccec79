@@ -1,0 +1,31 @@
+package com.tka.controller;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import com.tka.service.LoginService;
+
+public class RegisterMain {
+public static void main(String[] argsc)throws SQLException {
+	Scanner sc=new Scanner(System.in);
+	int choice=0,ch;
+	do {
+		System.out.println("1.Register for new user");
+		System.out.println("2.Login");
+		System.out.println("3.Update pasword");
+		System.out.println("4.Delete Account");
+		System.out.println("5.Fetch data");
+		System.out.println("Enter id,password");
+		ch=sc.nextInt();
+		switch(ch) {
+		case 1:{
+			.newRegister();
+			break;
+		}
+		case 2:{
+			L
+		}
+		}
+	}
+}
+}

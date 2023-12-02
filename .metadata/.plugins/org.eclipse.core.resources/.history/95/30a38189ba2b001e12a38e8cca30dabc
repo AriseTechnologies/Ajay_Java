@@ -1,0 +1,13 @@
+package a;
+
+public class X {
+private int add(int a,int b) {
+	int c=a+b;
+	return c;
+}
+void avg(int a,int b) {
+	X x=new X();
+	int sum=x.add(a,b);
+	System.out.println(sum/2);
+}
+}

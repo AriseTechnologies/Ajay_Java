@@ -1,0 +1,38 @@
+package practice;
+
+// Reverse the array
+
+public class Array8 {
+public static void main(String[] args) {
+	/*int [] arr= {1,2,3,4,5,6};
+	int l=arr.length;
+	int n=Math.floorDiv(l, 2);
+	int temp;
+	for(int i=0; i<n; i++) {
+	//	swap a[1]=a[l-i-1]
+	// a b temp
+		
+		temp=arr[i];
+		arr[i]=arr[l-i-1];
+		arr[l-i-1]=temp;
+	}
+	for(int element:arr) {
+		System.out.print(element +" ");
+	}*/
+	
+	int [][]mat1= {{4,1,5},
+			       {4,5,6}};
+	int [][]mat2= {{9,8,7},
+			       {8,7,5}};
+	int [][]result= {{0,0,0},
+			         {0,0,0}};
+	for(int i=0; i<mat1.length; i++) {
+		for(int j=0; j<mat1[i].length;j++) {
+			result[i][j]=mat1[i][j]+mat2[i][j];
+			System.out.print(result[i][j]+" ");
+		}
+		System.out.println(" ");
+	}
+	
+}
+}

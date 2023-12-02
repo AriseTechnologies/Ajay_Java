@@ -1,0 +1,14 @@
+package com.tkaAjay.My.First.Webservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyFirstWebserviceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MyFirstWebserviceApplication.class, args);
+		System.out.println("My webservice is running");
+	}
+
+}

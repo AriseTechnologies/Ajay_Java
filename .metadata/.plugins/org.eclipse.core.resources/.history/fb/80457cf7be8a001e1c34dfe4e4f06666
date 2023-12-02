@@ -1,0 +1,11 @@
+package a;
+
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class TestCLass {
+	public static void main(String[] args) {
+		Integer i = IntStream.rangeClosed(0, 10).filter(n -> n%2==0).sum();
+		System.out.println(i);
+	}
+}
